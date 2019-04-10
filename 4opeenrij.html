@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<style>
+		</style>
+		<script>
+			function naamOpslaan(){
+                var invoer = document.getElementById("input").value;
+                document.getElementById("uitkomst").innerHTML = invoer;
+                localStorage.setItem("SpelerNaam", invoer);
+                alert("Naam opgeslagen");
+
+            }
+            
+            function haalNaamop(){
+            var ophalen =   localStorage.getItem("SpelerNaam");
+            document.getElementById ("haalmaarop").innerHTML = ophalen;
+            }
+		</script>
+	</head>
+	<body>
+        <textarea id= "input" type="text"> </textarea> <br>
+        <button onclick=naamOpslaan()> Sla naam op </button> <br>
+        <div id=uitkomst > hier de uitkomst </div> <br>
+        <button onclick=haalNaamop()> Haal naam op </button> <br>
+        <div id=haalmaarop > hier de opbrengst </div>
+       
+	</body>
+</html>
