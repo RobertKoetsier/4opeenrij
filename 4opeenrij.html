@@ -3,28 +3,40 @@
 		<style>
 		</style>
 		<script>
-			function naamOpslaan(){
-                var invoer = document.getElementById("input").value;
-                document.getElementById("uitkomst").innerHTML = invoer;
-                localStorage.setItem("SpelerNaam", invoer);
-                alert("Naam opgeslagen");
-
-            }
+			function naamOpslaanSpeler1(jojo){
+                                var invoerSpeler1 = document.getElementById("input").value;
+                                document.getElementById("uitkomstSpeler1").innerHTML = invoerSpeler1;
+                                localStorage.setItem("SpelerNaam", invoerSpeler1);
+                                alert("Naam opgeslagen");
+                        }
+                        function naamOpslaanSpeler2(blabla){
+                                var invoerSpeler2 = document.getElementById("input").value;
+                                document.getElementById("uitkomstSpeler2").innerHTML = invoerSpeler2;
+                                localStorage.setItem("SpelerNaam2", invoerSpeler2);
+                                alert("Naam opgeslagen");
+                        }
             
-            function haalNaamop(){
-            var ophalen =   localStorage.getItem("SpelerNaam");
-            document.getElementById ("haalmaarop").innerHTML = ophalen;
-            }
+                        function haalSpeler1op(){
+                        var ophalen =   localStorage.getItem("SpelerNaam");
+                        document.getElementById ("haalmaarop").innerHTML = ophalen;
+                        }
+
+                        function haalSpeler2op(){
+                        var ophalen2 =   localStorage.getItem("SpelerNaam2");
+                        document.getElementById ("haalmaarop2").innerHTML = ophalen2;
+                        }
+
 		</script>
 	</head>
 	<body>
         <textarea id= "input" type="text"> </textarea> <br>
-        <button onclick=naamOpslaan()> Sla speler 1 op </button>
-        <button onclick=naamOpslaan()> Sla speler 2 op </button> <br>
-        <div id=uitkomst> </div>
-        <div id=uitkomst> </div>
-        <button onclick=haalNaamop()> Haal vorige speler op </button> <br>
+        <button onclick=naamOpslaanSpeler1("speler1")> Sla speler 1 op </button>
+        <button onclick=naamOpslaanSpeler2("speler2")> Sla speler 2 op </button> <br>
+        <div id=uitkomstSpeler1> Speler 1</div> 
+        <div id=uitkomstSpeler2> Speler 2 </div> <br>
+        <button onclick=haalSpeler1op()> Haal speler 1 op </button> 
+        <button onclick=haalSpeler2op()> Haal speler 2 op </button> <br>
         <div id=haalmaarop > </div>
-       
+        <div id=haalmaarop2 > </div>
 	</body>
 </html>
