@@ -1,0 +1,39 @@
+<html>
+    <head>
+    <script>
+        function winnaarSpelerEen(){
+            document.getElementById("deWinnaar").innerHTML = "<b>Gefeliciteerd speler 1!</b>"
+    
+                if(sessionStorage.clickcount) {
+                    sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                } else {
+                    sessionStorage.clickcount = 1;
+                }
+                document.getElementById("winnaargeel").innerHTML = sessionStorage.clickcount;
+            
+        }
+        
+        function winnaarSpelerTwee(){
+            document.getElementById("deWinnaar").innerHTML = "<b>Gefeliciteerd speler 2!</b>"
+
+            if(sessionStorage.clickcounttwee) {
+                    sessionStorage.clickcounttwee= Number(sessionStorage.clickcounttwee)+1;
+                } else {
+                    sessionStorage.clickcounttwee = 1;
+                }
+                document.getElementById("winnaarrood").innerHTML = sessionStorage.clickcounttwee;
+        }
+        function RestartGame(){   
+				window.location = window.location;
+			}
+    </script>
+    </head>
+    <body>
+            <p id="deWinnaar"><b>Wie heeft er gewonnen?</b></p>
+            <button id="winnaar1" type="button" onclick="winnaarSpelerEen()">Speler1 gewonnen!</button>
+            <button id="winnaar2" type="button" onclick="winnaarSpelerTwee()">Speler2 gewonnen!</button>
+            <p>Geel</p> <div id="winnaargeel"> Nog geen winst</div>
+            <p>Rood</p> <div id="winnaarrood"> Nog geen winst</div>
+
+    </body>
+</html>
